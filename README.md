@@ -20,17 +20,21 @@ This scraper is under active development. If you have any feature requests you c
 
 ## Input Parameters
 
-The input of this scraper should be JSON containing the list of pages on DuckDuckGo that should be visited. Required fields are:
+The input of this scraper should be JSON containing the list of pages on DuckDuckGo that should be visited. Possible fields are:
 
-| Field                | Type    | Description                                                                                                                                                                                                    |
-| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| search               | String  | (Required) Keyword that you want to search on DuckDuckGo.                                                                                                                                                       |
-| searchMode               | String  | (Required) Which mode you want to start the DuckDuckGo scraper. `images`, `news`, `videos` and `default` are the possible values that can be provided.                                                                                                                                                       |
-| region               | String  | (Required) Regions you want to use the DuckDuckGo search engine. To retrieve the results from all regions, is should be `wt-wt`.                                                                                                                                                      |
-| safeSearch               | String  | (Required) Which safety mode you want to initiate the DuckDuckGo search. The possible values are `OFF`, `MODERATE` or `STRICT`.                                                                                                                                                       |
-| endPage              | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`.                                                          |
-| maxItems             | Integer | (optional) You can limit scraped items. This should be useful when you search through the big lists or search results.                                                                                                |
-| proxy                | Object  | Proxy configuration                                                                                                                                                                                            |
+- `search`: (Required) (String) Keyword that you want to search on DuckDuckGo.
+
+- `searchMode`: (Required) (String) Which mode you want to start the DuckDuckGo scraper. `images`, `news`, `videos` and `default` are the possible values that can be provided.
+
+- `region`: (Required) (String) Regions you want to use the DuckDuckGo search engine. To retrieve the results from all regions, is should be `wt-wt`.
+
+- `safeSearch`: (Required) (String) Which safety mode you want to initiate the DuckDuckGo search. The possible values are `OFF`, `MODERATE` or `STRICT`.
+
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+
+- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
